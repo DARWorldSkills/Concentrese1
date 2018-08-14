@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".Juego">
 
     <LinearLayout
@@ -32,6 +33,7 @@
                 android:gravity="center"
                 android:text="Jugador1"
                 android:textAlignment="center"
+                android:textColor="@color/rojo"
                 android:textSize="18sp" />
 
             <TextView
@@ -62,6 +64,7 @@
                 android:gravity="center"
                 android:text="Jugador2"
                 android:textAlignment="center"
+                android:textColor="@color/rojo"
                 android:textSize="18sp" />
 
             <TextView
