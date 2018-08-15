@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Juego extends AppCompatActivity {
-    private int fondoJuego= R.drawable.juego;
+    private int fondoJuego= R.drawable.d;
     private int[] imagenesJuego={
             R.drawable.atleta,
             R.drawable.balon,

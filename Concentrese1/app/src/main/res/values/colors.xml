@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#40c9ff</color>
+    <color name="colorAccent">#FF397F</color>
 
 
     <color name="azul">#0079ff</color>
@@ -12,4 +12,10 @@
     <color name="colorVerde">#43ff40</color>
     <color name="colorGris">#9c9c9c</color>
     <color name="transparente">#00ffffff</color>
+
+
+
+    <color name="asd">#71ECDE</color>
+    <color name="rosa">#FF397F</color>
+    <color name="oscuro">#101d5b</color>
 </resources>
