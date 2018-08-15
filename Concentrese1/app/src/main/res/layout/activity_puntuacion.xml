@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Puntuacion">
+    tools:context=".controllers.Puntuacion">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -271,7 +271,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="112dp"
-                        android:text="Jugador 1"
                         android:textColor="@color/rojo"
                         android:textSize="20sp" />
 
@@ -298,7 +297,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="112dp"
-                        android:text="Jugador 2"
                         android:textColor="@color/rojo"
                         android:textSize="20sp" />
 
@@ -325,7 +323,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="112dp"
-                        android:text="Jugador 3"
                         android:textColor="@color/rojo"
                         android:textSize="20sp" />
 
@@ -352,7 +349,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="112dp"
-                        android:text="Jugador 4"
                         android:textColor="@color/rojo"
                         android:textSize="20sp" />
 
@@ -379,7 +375,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="112dp"
-                        android:text="Jugador 5"
                         android:textColor="@color/rojo"
                         android:textSize="20sp" />
 

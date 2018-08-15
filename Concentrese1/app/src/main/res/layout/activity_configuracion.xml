@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Configuracion">
+    tools:context=".controllers.Configuracion">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -50,7 +50,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="tiempo">
 
 
             <TextView
@@ -84,7 +85,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="movimientos">
 
 
             <TextView
@@ -117,7 +119,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:onClick="jugar">
 
 
             <TextView

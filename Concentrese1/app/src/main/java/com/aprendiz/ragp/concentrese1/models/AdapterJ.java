@@ -1,4 +1,4 @@
-package com.aprendiz.ragp.concentrese1;
+package com.aprendiz.ragp.concentrese1.models;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -42,7 +42,7 @@ public class AdapterJ extends BaseAdapter{
         item.setPadding(8,8,8,8);
         item.setLayoutParams(new GridView.LayoutParams(ancho,alto));
         BitmapFactory.Options op = new BitmapFactory.Options();
-        op.inSampleSize=2;
+        op.inSampleSize=4;
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),imagenesJuego[position],op);
         item.setImageBitmap(bitmap);
         return item;
