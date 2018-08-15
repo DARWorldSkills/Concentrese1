@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
-    tools:context=".Resumen">
+    tools:context=".controllers.Resumen">
 
     <android.support.v7.widget.CardView
         android:id="@+id/btnContinuar"
@@ -14,14 +14,17 @@
         android:layout_marginBottom="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="@color/axulclaro"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTwi">
 
 
         <LinearLayout
+            android:id="@+id/btnContinuar"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -69,14 +72,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="144dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.153">
@@ -98,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="61dp"
+                    android:layout_marginStart="38dp"
                     android:text="juan"
                     android:textColor="@color/rojo"
                     android:textSize="25sp" />
@@ -109,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="50dp"
+                    android:layout_marginEnd="38dp"
                     android:text="Pedro"
                     android:textColor="@color/rojo"
                     android:textSize="25sp" />
@@ -118,7 +120,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true">
@@ -129,7 +131,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="69dp"
                     android:text="0"
                     android:textSize="55sp" />
 
@@ -139,7 +140,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="67dp"
                     android:text="0"
                     android:textSize="55sp" />
 
@@ -150,7 +150,7 @@
                     android:layout_centerInParent="true"
                     android:text="Tiempo:"
                     android:textColor="@color/azul"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </RelativeLayout>
@@ -167,7 +167,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="34dp"
                     android:text="Puntuación"
                     android:textColor="@color/azul"
                     android:textSize="20sp" />
@@ -179,8 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="32dp"
-                    android:text="Puntuación:"
+                    android:text="Puntuación"
                     android:textColor="@color/azul"
                     android:textSize="20sp" />
 
