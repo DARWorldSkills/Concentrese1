@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
@@ -59,6 +61,7 @@ public class Juego extends AppCompatActivity {
     boolean bandera=true;
     boolean arreglo=true;
     ImageView imagen1, imagen2;
+    View itemR1, itemR2;
     Animator animator,animator1,animator2;
     MediaPlayer endgame;
     MediaPlayer pipe;
@@ -83,7 +86,7 @@ public class Juego extends AppCompatActivity {
         contenedorJuego.setHasFixedSize(true);
         adapterAR.setMlistener(new AdapterAR.OnItemClickListener() {
             @Override
-            public void itemClick(int position, ImageView imagen) {
+            public void itemClick(int position, ImageView imagen, View itemView) {
 
 
                 canselect++;
@@ -99,7 +102,8 @@ public class Juego extends AppCompatActivity {
                     if (canselect == 1) {
                         pos1 = position;
                         imagen1 = item;
-
+                        itemR1 =itemView;
+                        itemR1.setEnabled(false);
                         animator = ViewAnimationUtils.createCircularReveal(imagen1, 0, alto / 2, 0, ancho * 1.5f);
                         animator.setDuration(200);
                         animator.start();
@@ -108,6 +112,8 @@ public class Juego extends AppCompatActivity {
                     if (canselect == 2) {
                         pos2 = position;
                         imagen2 = item;
+                        itemR2 =itemView;
+                        itemR2.setEnabled(false);
                         animator = ViewAnimationUtils.createCircularReveal(imagen2, 0, alto / 2, 0, ancho * 1.5f);
                         animator.setDuration(200);
                         animator.start();
@@ -177,6 +183,7 @@ public class Juego extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
+                        itemR1 = null;
                         imagen1.setVisibility(View.INVISIBLE);
                         imagen1=null;
                     }
@@ -187,8 +194,10 @@ public class Juego extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animator animation) {
                         super.onAnimationEnd(animation);
+                        itemR2 = null;
                         imagen2.setVisibility(View.INVISIBLE);
                         imagen2=null;
+
                         pos1=-1;
                         pos2=-1;
                         contenedorJuego.setEnabled(true);
@@ -237,7 +246,7 @@ public class Juego extends AppCompatActivity {
                     TextView txtp1 = dialog.findViewById(R.id.puntuacionR1);
                     TextView txtp2 = dialog.findViewById(R.id.puntuacionR2);
                     TextView txttiempo = dialog.findViewById(R.id.txtTiempoFinal);
-                    CardView btnContinuar = dialog.findViewById(R.id.btnContinuar);
+                    TextView btnContinuar = dialog.findViewById(R.id.txtContinuar);
                     ImageButton btnTwi = dialog.findViewById(R.id.btnTwi);
                     ImageButton btnface = dialog.findViewById(R.id.btnFace);
 
@@ -285,6 +294,7 @@ public class Juego extends AppCompatActivity {
                     });
 
                     dialog.setCancelable(false);
+                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                     dialog.show();
 
                 }
@@ -295,7 +305,8 @@ public class Juego extends AppCompatActivity {
                 animator2 = ViewAnimationUtils.createCircularReveal(imagen2,ancho/2,alto/2,alto,0);
                 animator1.setDuration(200);
                 animator2.setDuration(200);
-
+                itemR1.setEnabled(true);
+                itemR2.setEnabled(true);
                 pipe.start();
                 animator1.addListener(new AnimatorListenerAdapter() {
                     @Override

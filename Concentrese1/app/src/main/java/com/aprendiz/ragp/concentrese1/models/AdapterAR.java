@@ -3,6 +3,7 @@ package com.aprendiz.ragp.concentrese1.models;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +20,7 @@ public class AdapterAR extends RecyclerView.Adapter<AdapterAR.Holder>{
     boolean arreglo = Juego.arreglo1;
     private OnItemClickListener mlistener;
     public interface OnItemClickListener{
-        void itemClick(int position, ImageView imagen);
+        void itemClick(int position, ImageView imagen, View itemView);
     }
 
     public AdapterAR(int[] imagenesJuego, int item, Context context) {
@@ -52,7 +53,7 @@ public class AdapterAR extends RecyclerView.Adapter<AdapterAR.Holder>{
 
     public class Holder extends RecyclerView.ViewHolder {
         ImageView item = itemView.findViewById(R.id.itemJuego);
-        public Holder(View itemView, final OnItemClickListener listener) {
+        public Holder(final View itemView, final OnItemClickListener listener) {
             super(itemView);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,7 +63,7 @@ public class AdapterAR extends RecyclerView.Adapter<AdapterAR.Holder>{
                         if (listener != null) {
                             int position = getAdapterPosition();
                             if (position != RecyclerView.NO_POSITION) {
-                                listener.itemClick(position, item);
+                                listener.itemClick(position, item, itemView);
                             }
                         }
                     }
