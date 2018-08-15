@@ -8,20 +8,23 @@
     tools:context=".controllers.MenuT">
 
 
-    <TextView
+    <Button
         android:id="@+id/textView3"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="228dp"
-        android:text="Jugar"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/boton_nada"
+        android:backgroundTint="#00e5e5e5"
         android:onClick="jugar"
+        android:text="Jugar"
         android:textColor="@color/asd"
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,12 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
+        android:onClick="puntuacion"
         android:text="Puntuación"
         android:textColor="@color/asd"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:onClick="puntuacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
