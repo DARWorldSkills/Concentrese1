@@ -32,5 +32,7 @@ public class Resumen extends AppCompatActivity {
     }
 
     public void Face(View view) {
+
+
     }
 }
