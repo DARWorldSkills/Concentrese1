@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,8 @@ import com.aprendiz.ragp.concentrese1.models.Score;
 import java.util.List;
 
 public class Puntuacion extends AppCompatActivity implements View.OnClickListener{
-    CardView btnFacil, btnMedio, btnDificl, btnTiempo, btnMovimientos,btnContinuar;
+    RadioButton btnFacil, btnMedio, btnDificl, btnTiempo, btnMovimientos;
+    Button btnContinuar;
     TextView txt1, txt2, txt3, txt4,txt5;
     String dificultad="4", modo="1";
     @Override
@@ -69,12 +71,13 @@ public class Puntuacion extends AppCompatActivity implements View.OnClickListene
 
 
     private void inizialite() {
-        btnFacil = findViewById(R.id.btnFacil);
-        btnMedio = findViewById(R.id.btnMedio);
-        btnDificl = findViewById(R.id.btnDificil);
-        btnTiempo = findViewById(R.id.btnTiempos);
-        btnMovimientos = findViewById(R.id.btnMovimientos);
+        btnFacil = findViewById(R.id.rbtnFacil);
+        btnMedio = findViewById(R.id.rbtnMedio);
+        btnDificl = findViewById(R.id.rbtnDificil);
+        btnTiempo = findViewById(R.id.rbtnTiempos);
         btnContinuar = findViewById(R.id.btnContinuar);
+        btnMovimientos = findViewById(R.id.rbtnMovimientos);
+
         txt1 = findViewById(R.id.txtUno);
         txt2 = findViewById(R.id.txtDos);
         txt3 = findViewById(R.id.txtTres);
@@ -96,28 +99,28 @@ public class Puntuacion extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btnFacil:
+            case R.id.rbtnFacil:
                 dificultad="4";
                 inputData();
                 break;
 
-            case R.id.btnMedio:
+            case R.id.rbtnMedio:
                 dificultad="6";
                 inputData();
                 break;
 
 
-            case R.id.btnDificil:
+            case R.id.rbtnDificil:
                 dificultad="8";
                 inputData();
                 break;
 
-            case R.id.btnTiempos:
+            case R.id.rbtnTiempos:
                 modo="1";
                 inputData();
                 break;
 
-            case R.id.btnMovimientos:
+            case R.id.rbtnMovimientos:
                 modo="2";
                 inputData();
                 break;
@@ -125,6 +128,7 @@ public class Puntuacion extends AppCompatActivity implements View.OnClickListene
             case R.id.btnContinuar:
                 finish();
                 break;
+
 
         }
     }

@@ -13,6 +13,7 @@
         android:layout_height="61dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
         android:text="Juego terminado"
         android:textAlignment="center"
         android:textColor="@color/naranja"
@@ -20,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="165dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -167,7 +168,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/txtContinuar"
         android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -182,5 +183,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFace"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.52" />
 </android.support.constraint.ConstraintLayout>
